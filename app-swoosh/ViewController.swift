@@ -9,13 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var swooshLogo: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        swooshLogo.frame = CGRect(x: view.frame.width, y: 0, width: swooshLogo.frame.width, height: swooshLogo.frame.height)
     }
 
+    
+    //
 
 }
+
 
 
