@@ -9,7 +9,10 @@
 import UIKit
 
 class LeagueViewController: UIViewController {
-
+    @IBOutlet weak var nextButton: BorderButton!
+    
+    var player = Player()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,8 +20,24 @@ class LeagueViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func nextButton(_ sender: BorderButton) {
+    @IBAction func mensButtonTapped(_ sender: Any) {
+        selectLeague(leagueType: "mens")
+    }
+    @IBAction func womensButtonTapped(_ sender: Any) {
+        selectLeague(leagueType: "womens")
+    }
+    @IBAction func coedButtonTapped(_ sender: Any) {
+        selectLeague(leagueType: "coed")
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: BorderButton) {
         performSegue(withIdentifier: "goToSkillViewSegue", sender: self)
+    }
+    
+    
+    func selectLeague(leagueType: String) {
+        player.desiredLeague = leagueType
+        nextButton.isEnabled = true
     }
     
     /*
@@ -31,4 +50,5 @@ class LeagueViewController: UIViewController {
     }
     */
 
+    //iboutlet and thee is a lot more interesting things that can be done inside of the system if there is a way that can be provided if there is a way and we want to check
 }

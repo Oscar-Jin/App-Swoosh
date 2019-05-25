@@ -126,6 +126,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mensButtonTapped:" destination="BmZ-pI-Jjw" eventType="touchUpInside" id="uFo-ce-dqm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9G-mj-Sct" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="82" width="343" height="52"/>
@@ -137,6 +140,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="womensButtonTapped:" destination="BmZ-pI-Jjw" eventType="touchUpInside" id="dok-99-orq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26A-LD-S7V" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="164" width="343" height="52"/>
@@ -148,6 +154,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="coedButtonTapped:" destination="BmZ-pI-Jjw" eventType="touchUpInside" id="wtI-ZI-u9g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -165,7 +174,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v15-3Q-4Zy" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v15-3Q-4Zy" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="16" y="565" width="343" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -176,7 +185,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButton:" destination="BmZ-pI-Jjw" eventType="touchUpInside" id="KCW-xe-UR6"/>
+                                    <action selector="nextButtonTapped:" destination="BmZ-pI-Jjw" eventType="touchUpInside" id="KCW-xe-UR6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOP-ox-JRP">
@@ -208,6 +217,7 @@
                         <viewLayoutGuide key="safeArea" id="xwy-d1-8wH"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="v15-3Q-4Zy" id="MdP-4K-DKK"/>
                         <segue destination="g3Y-5L-B70" kind="show" identifier="goToSkillViewSegue" id="edh-4F-kds"/>
                     </connections>
                 </viewController>
