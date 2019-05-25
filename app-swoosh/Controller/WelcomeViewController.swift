@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     @IBOutlet weak var swooshLogo: UIImageView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
@@ -17,11 +17,17 @@ class ViewController: UIViewController {
         
         swooshLogo.frame = CGRect(x: view.frame.width, y: 0, width: swooshLogo.frame.width, height: swooshLogo.frame.height)
     }
-
     
-    //
 
+    @IBAction func unwindToMainView(unwindSegue: UIStoryboardSegue) {
+        
+    }
 }
+
+
+
+
+
 
 
 
