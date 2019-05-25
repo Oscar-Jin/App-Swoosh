@@ -40,15 +40,10 @@ class LeagueViewController: UIViewController {
         nextButton.isEnabled = true
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let skillViewController = segue.destination as? SkillViewController {
+            skillViewController.player = player
+        }
     }
-    */
-
-    //iboutlet and thee is a lot more interesting things that can be done inside of the system if there is a way that can be provided if there is a way and we want to check
 }
